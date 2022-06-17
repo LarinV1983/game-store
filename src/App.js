@@ -5,15 +5,14 @@ import Header from './components/header/Header.jsx';
 function App () {
 	return (
 		<div className = "App">
-		<Header/>
-		 <Routes>
+			<Header/>
+			<Routes>
 		    <Route path="/" element={<Home/>} />
-		    
-{/*        <Route path="about" element={<About />} />
+{/*     <Route path="about" element={<About />} />
         <Route path="users" element={<Users />} />*/}
-      </Routes>
+     </Routes>
 		</div>
-		);
+	);
 }
 
 export default App;
