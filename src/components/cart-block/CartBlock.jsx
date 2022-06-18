@@ -1,25 +1,35 @@
 import React from 'react';
-import { useState } from 'react';
-import './cart-block.css';
+import { useState, useCallback } from 'react';
 import { BiCartAlt } from 'react-icons/bi';
 import { useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import MenuCart from '../menu-cart/MenuCart';
+import './cart-block.css';
 
  function CartBlock() {
- 	const [isCartVisible, setCartVisible] = useState(false);
+ 	// const [isCartVisible, setCartVisible] = useState(false);
+ 	const [isCartMenuVisible, setCartMenuVisible] = useState(false);
  	const items = useSelector(state => state.cart.itemsCart);
  	const totalPrice = items.reduce((acc, game) => acc += game.price, 0);
+ 	const navigate = useNavigate(); 	
+
 
  const VisibleCart = (() => {
- 	 		setCartVisible(!isCartVisible);
+ 	 		setCartMenuVisible(!isCartMenuVisible);
  	 	});
+
+ const handleOrderClick = useCallback(() => {
+ 	setCartMenuVisible(false);
+ 	navigate('order');
+  }, [navigate]);
 
 	return (
 		<div className= "cart-block">
+		
 		<BiCartAlt size={25} className='cart-block__icon' onClick={VisibleCart}/>
 		{totalPrice > 0 ? (
 			<span className = 'cart-block__total-price'>{totalPrice} руб.</span> ): null}
-		{ isCartVisible &&	<MenuCart items={items} onClick={() => null}></MenuCart>		
+		{ isCartMenuVisible &&	<MenuCart items={items} onClick={handleOrderClick}></MenuCart>		
 }
    </div>
 	);
