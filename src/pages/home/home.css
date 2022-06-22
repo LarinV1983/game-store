@@ -1,4 +1,9 @@
 .home-page{
-	display: flex;
-    flex-wrap: wrap;
+  display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(320px, 320px));
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 50px;
+	grid-row-gap: 50px;
+	justify-content: center;
+
 }

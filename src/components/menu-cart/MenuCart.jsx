@@ -12,6 +12,7 @@ function MenuCart({items, onClick}) {
 			{ items.length > 0 ? items.map((game) => 
 				<CartGame 
 				key={game.title}
+				image={game.image}
 				price={game.price}
 				title={game.title}
 				id={game.id}

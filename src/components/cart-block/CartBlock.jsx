@@ -7,7 +7,6 @@ import MenuCart from '../menu-cart/MenuCart';
 import './cart-block.css';
 
  function CartBlock() {
- 	// const [isCartVisible, setCartVisible] = useState(false);
  	const [isCartMenuVisible, setCartMenuVisible] = useState(false);
  	const items = useSelector(state => state.cart.itemsCart);
  	const totalPrice = items.reduce((acc, game) => acc += game.price, 0);

@@ -2,11 +2,16 @@
     position: absolute;
     top: 30px;
     left: -300px;
-    background-color: rgb(36, 37, 41);
+    background-color: #DBDFF0;
     width: 400px;
     padding: 10px 20px;
     z-index: 2;
     border-radius: 15px;
+    opacity: 0.9;
+    -webkit-box-shadow: 2px 4px 31px 9px rgba(38, 40, 41, 0.2);
+-moz-box-shadow: 2px 4px 31px 9px rgba(38, 40, 41, 0.2);
+box-shadow: 2px 4px 31px 9px rgba(38, 40, 41, 0.2);
+
 }
 
 .cart-menu__arrange {

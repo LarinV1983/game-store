@@ -9,16 +9,37 @@
 .wrapper{
 	display: flex;
 	flex-grow: 1;
+	
 }
 
 .header__store-title{
-	color: #fff;
+	color: #70817E;
 	text-decoration: none;
 	font-size: 24px;
 	font-weight: bold;
 }
-
+ @media (max-width: 1200px){
+ 	.header__store-title{
+ 		padding-left: 100px;
+ 	}
+ }
+@media (max-width: 1000px){
+ 	.header__store-title{
+ 		padding-left: 200px;
+ 	}
+ }
 .header__cart-btn-wrapper {
 	justify-content: flex-end;
 
+}
+
+ @media (max-width: 1200px){
+ 	.header__cart-btn-wrapper{
+ 		padding-right: 100px;
+ 	}
+}
+@media (max-width: 1000px){
+ 	.header__cart-btn-wrapper{
+		padding-right: 200px; 
+ 	}
 }

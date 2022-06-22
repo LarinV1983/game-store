@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
 }
+.order-title{
+    text-align: center;
+
+}
 
 .order-page__left {
     width: 70%;

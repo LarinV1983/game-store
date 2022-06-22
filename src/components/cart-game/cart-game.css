@@ -15,3 +15,10 @@
     margin-left: 5px;
     cursor: pointer;
 }
+.cart-game__image{
+    height: 70px;
+    width: 20%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}

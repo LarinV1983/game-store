@@ -15,7 +15,8 @@ function Order() {
 }
 
 	 if(items.length < 1) {
-        return <h1>Ваша корзина пуста!</h1>
+        return <h1 className= 'order-title'>Ваша корзина пуста!</h1>
+
     }
 
   return (
