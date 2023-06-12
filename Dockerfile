@@ -2,9 +2,11 @@ FROM node
 
 WORKDIR /shop
 
-COPY . .
+COPY package.json /shop
 
 RUN npm install
+
+COPY . .
 
 EXPOSE 3000
 
